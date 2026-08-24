@@ -78,8 +78,8 @@ Which of these are MISSING? (cross-reference Lecture 1 OWASP Top 10:2025  A06)
   - PR title follows `feat(labN): <topic>`
   - No secrets or large temporary files are committed
   - `submissions/lab1.md` exists
-- Auto-fill verified: [ ] Yes
-- Draft PR evidence: Pending - create a draft PR and add its URL here.
+- Auto-fill verified: [x] Yes — the template appeared automatically before editing.
+- Draft PR evidence: https://github.com/nptkenny12/DevSecOps/pull/3
 
 ## Lab Completion Checklist
 - [x] Task 1 — Juice Shop deployed and triage report completed
