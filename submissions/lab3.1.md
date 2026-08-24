@@ -27,7 +27,7 @@ test: first signed commit
 A forged-author commit could make it appear that a trusted developer introduced a malicious change, allowing the attacker to deny responsibility and complicating incident investigation. 
 The Verified badge makes the attack visible by confirming whether the commit was signed with a key linked to the claimed GitHub identity; an unsigned or unverified commit would raise suspicion.
 
-## ## Task 2: Pre-commit + gitleaks
+##  Task 2: Pre-commit + gitleaks
 
 ### `.pre-commit-config.yaml`
 
@@ -80,6 +80,13 @@ Fingerprint: submissions/leak-attempt.txt:github-pat:2
 
 detect private key.......................................................Passed
 check for added large files..............................................Passed
+`````
+###
+### Task 2 completion checklist
+- [x] `.pre-commit-config.yaml` exists.
+- [x] Gitleaks uses a valid v8.x release.
+- [x] Additional pre-commit hooks are configured.
+- [x] The fake secret was blocked.
+- [x] The blocked output is documented in `submissions/lab3.1.md`.
+- [x] The final commit is signed and pushed.
 
-
-```
