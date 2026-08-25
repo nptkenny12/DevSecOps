@@ -1,0 +1,10 @@
+title = "Lab 3.2 Gitleaks configuration"
+
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Intentional lab examples only"
+paths = [
+  '''^docs/examples/.*'''
+]
