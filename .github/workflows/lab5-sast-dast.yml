@@ -93,6 +93,9 @@ jobs:
           echo "Semgrep JSON report ready."
 
       - name: SAST security gate
+        # Juice Shop intentionally contains vulnerabilities. The gate is
+        # report-only for this lab; missing/invalid reports still fail above.
+        continue-on-error: true
         run: |
           python3 labs/lab5/scripts/security_gate.py semgrep \
             "${RESULTS_DIR}/semgrep.json"
@@ -226,6 +229,8 @@ jobs:
           echo "ZAP reports ready."
 
       - name: DAST security gate
+        # Findings are expected in Juice Shop; report them without failing CI.
+        continue-on-error: true
         run: |
           python3 labs/lab5/scripts/security_gate.py zap \
             "${RESULTS_DIR}/baseline-report.json" \
